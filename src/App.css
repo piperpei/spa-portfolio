@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #ece5f2;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 700px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* ===== Header ===== */
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #884499;
+}
+
+header hr {
+  width: 60%;
+  border: none;
+  border-top: 3px solid #8888cc;
+  margin: 0.75rem auto;
+}
+
+/* ===== Add Project Form ===== */
+.add-form {
+  background-color: #ffffff;
+  border: 2px solid #ddaacc;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(136, 68, 153, 0.15);
+}
+
+.add-form h2 {
+  color: #884499;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #8888cc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #faf8fc;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+textarea {
+  height: 120px;
+  line-height: 1.5;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #884499;
+  box-shadow: 0 0 5px rgba(136, 68, 153, 0.3);
+  background-color: #ffffff;
+}
+
+button {
+  background-color: #884499;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: "Times New Roman", Times, serif;
+}
+
+button:hover {
+  background-color: #8888cc;
+  transform: scale(1.03);
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  background-color: #ffffff;
+  border: 2px solid #ddaacc;
+  border-radius: 15px;
+  padding: 1.25rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(136, 68, 153, 0.15);
+  width: 80%;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #8888cc;
+  background-color: #faf8fc;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* ===== Project List ===== */
+.project-list {
+  background-color: #ffffff;
+  border: 2px solid #ddaacc;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(136, 68, 153, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Project Card ===== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #f9f7fb;
+  border: 1px solid #ddaacc;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  background-color: #f2ebf7;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(136, 68, 153, 0.2);
+}
+
+.image-placeholder {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #884499;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #884499;
+  background-color: #f1e6f7;
+  font-size: 1.2rem;
+}
+
+/* ===== Centered Content Inside Cards ===== */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-content h3 {
+  margin: 0.3rem 0 0.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-content p {
+  max-width: 90%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .image-placeholder {
+    width: 55px;
+    height: 55px;
+  }
+
+  .project-card {
+    padding: 0.75rem;
+  }
+}
